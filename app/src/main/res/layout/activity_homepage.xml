@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="HomepageActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/darkblue">
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/address_Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|bottom"
+                        android:text="Your Home"
+                        android:textColor="@color/white"
+                        android:textSize="26dp" />
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_weight="7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center"
+                        android:drawableLeft="@drawable/ic_icon_location"
+                        android:textSize="24px"
+                        android:text="2715 Ash Dr. San Jose, South Dakota 83475"
+                        android:textColor="@color/greysmarthouse"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <LinearLayout
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="ROOMS"
+                            android:textSize="30px" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="7dp"
+                            android:background="@color/redsmarthouse"/>
+                    </LinearLayout>
+                    <Space
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <ImageButton
+                        android:layout_weight="3"
+                        android:layout_gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_add_button"
+                        android:scaleType="fitCenter"
+                        android:onClick="onclick_addroom"
+                        android:layout_marginTop="20px"
+                        android:background="@color/disabled"/>
+                </LinearLayout>
+            </LinearLayout>
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <GridView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:numColumns="2"
+        tools:listitem="@layout/livingroomcolumn">
+
+    </GridView>
+
+
+
+
+</LinearLayout>
